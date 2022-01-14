@@ -2,6 +2,7 @@ let playerhand = [];
 let dealerhand = [];
  
 function shuffleMe(){cardDeck.sort(function (a, b) {return Math.random() - 0.5;})};
+function viewPlayerHand(){document.getElementById('playerHandViewer').innerHTML = "this"  };
 
 
 function pushOne(){
