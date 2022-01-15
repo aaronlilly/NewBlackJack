@@ -13,15 +13,15 @@ shuffleMe();
 
 
 
-var roll = Math.floor(Math.random() * cardDeck.length) + 1;
-
+var roll = Math.floor(Math.random() * cardDeck.length);
+console.log(roll);
 playerhand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
 
 
 cardDeck.splice(roll,1,);
 
-console.log(playerhand);
-console.log(cardDeck);
+// console.log(playerhand);
+// console.log(cardDeck);
 
 viewPlayerHand()
 }
