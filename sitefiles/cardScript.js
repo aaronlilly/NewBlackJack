@@ -2,9 +2,12 @@ let playerhand = [];
 let dealerhand = [];
  
 function shuffleMe(){cardDeck.sort(function (a, b) {return Math.random() - 0.5;})};
-function viewPlayerHand(){document.getElementById('playerHandViewer').innerHTML = "this"  };
-
-
+function viewPlayerHand(){
+        document.getElementById("playerHandViewer").innerHTML = "";
+        for (var i = 0; i < playerhand.length; i++) {
+                document.getElementById("playerHandViewer").innerHTML += playerhand[i].img };
+        }
+       
 function pushOne(){
 shuffleMe();
 
@@ -19,6 +22,8 @@ cardDeck.splice(roll,1,);
 
 console.log(playerhand);
 console.log(cardDeck);
+
+viewPlayerHand()
 }
 
 
