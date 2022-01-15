@@ -1,24 +1,18 @@
    $(document).ready(function() {
        $('#dot').click(function() {
-
-       pushOne();
+       shuffleMe();
+       initDeal();
+       //$('#startButton').css({'display':'none'});
       });
   });
 
 
 
 
+//  $(document).ready(function() {
+//        $('.dot').click(function() {
 
-
-
-
-//////////////////
-//reference code
-
- $(document).ready(function() {
-       $('.dot').click(function() {
-
-       $('.dot').css({'display':'none'});
-         $('.menuOn').removeClass("hiddenish");
-      });
-  });
+//        $('#startButton').css({'display':'none'});
+//          $('.menuOn').removeClass("hiddenish");
+//       });
+//   });
