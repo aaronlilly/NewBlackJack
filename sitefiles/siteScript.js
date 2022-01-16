@@ -2,17 +2,7 @@
        $('#dot').click(function() {
        shuffleMe();
        initDeal();
-       //$('#startButton').css({'display':'none'});
+       $('#startButton').css({'display':'none'});
+       $('#options').css({'display':'block'});
       });
   });
-
-
-
-
-//  $(document).ready(function() {
-//        $('.dot').click(function() {
-
-//        $('#startButton').css({'display':'none'});
-//          $('.menuOn').removeClass("hiddenish");
-//       });
-//   });
