@@ -1,3 +1,8 @@
+var playerStatus = {
+
+};
+
+
 // $(document).ready(function() {
 //     // $('#dot').click(function() {
 //     // shuffleMe();
