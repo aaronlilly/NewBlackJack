@@ -1,9 +1,6 @@
 let playerhand = [];
 let dealerhand = [];
 
-
-
-
 var coverCard =[{"img":'<img src ="./cards/covercard.png" id="coverCard" style="width: 106px;height:164px;">'}]; 
 function shuffleMe(){cardDeck.sort(function (a, b) {return Math.random() - 0.5;})};
 
@@ -53,8 +50,3 @@ function initDeal(){
         revealDealerPartialHand()
 }
 
-////reference
- ///playerHand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck
-
-//[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
-        //  cardDeck.splice(roll,1,);
