@@ -1,65 +1,49 @@
 var playerStatus = {
-
+tnum: 0,
+bnum: 0,
+stand: "no",
+bust: "no",
+points: 0,
+reset: function () {
+    this.tnum = 0;
+    this.bnum = 0;
+    this.stand = "no";
+    this.bust =  "no";
+  }
 };
 
+var dealerStatus = {
+    tnum: 0,
+    bnum: 0,
+    stand: "no",
+    bust: "no",
+    points: 0,
+    reset: function () {
+        this.tnum = 0;
+        this.bnum = 0;
+        this.stand = "no";
+        this.bust =  "no";
+      }
+    };
 
-// $(document).ready(function() {
-//     // $('#dot').click(function() {
-//     // shuffleMe();
-//     // initDeal();
-//     // $('#startButton').css({'display':'none'});
-//     // $('#options').css({'display':'block'});
-// //    });
-// });
+function playerHandEvaluate(){
+    for (var i = 0; i < playerhand.length; i++) {
+        playerStatus.tnum +=  playerhand[i].eval;
+        playerStatus.bnum +=  playerhand[i].altEval;
+    }  
+};
 
+function playerScoreShow(){
+    playerHandEvaluate();
+    document.getElementById("pTop").innerHTML = playerStatus.tnum;
+    document.getElementById("pBottom").innerHTML = playerStatus.bnum;
+};
 
+function youShouldntCheat(){
+    for (var i = 0; i < dealerhand.length; i++) {
+        dealerStatus.tnum +=  dealerhand[i].eval;
+        dealerStatus.bnum +=  dealerhand[i].altEval;
+    }  
+};
 
-// var coverCard =[{"img":'<img src ="./cards/covercard.png" id="coverCard" style="width: 106px;height:164px;">'}]; 
-// function shuffleMe(){cardDeck.sort(function (a, b) {return Math.random() - 0.5;})};
-
-// function viewPlayerHand(){
-//         document.getElementById("playerHandViewer").innerHTML = "";
-//         for (var i = 0; i < playerhand.length; i++) {
-//                 document.getElementById("playerHandViewer").innerHTML += playerhand[i].img };
-// }
-// function CoverDealerPartialHand(){
-//         document.getElementById("dealerHandViewer").innerHTML = coverCard[0].img;
-
-// }
-// function revealDealerPartialHand(){
-//         document.getElementById("dealerHandViewer").innerHTML = "";
-//         document.getElementById("dealerHandViewer").innerHTML = coverCard[0].img;
-//         for (var i = 1; i < dealerhand.length; i++) {
-//                 document.getElementById("dealerHandViewer").innerHTML += dealerhand[i].img;
-//         };
-// }
-       
-// function initDPlayer(){
-//         var roll = Math.floor(Math.random() * cardDeck.length);
-//         playerhand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
-//         cardDeck.splice(roll,1,);
-//         viewPlayerHand()
-// }
-
-// function initDDealer(){
-//         var roll = Math.floor(Math.random() * cardDeck.length);
-//         dealerhand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
-//         cardDeck.splice(roll,1,);
-//         CoverDealerPartialHand();
-// }
-
-// function secondCDealer(){
-//         var roll = Math.floor(Math.random() * cardDeck.length);
-//         dealerhand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
-//         cardDeck.splice(roll,1,);
-        
-// }
-
-// function initDeal(){
-//         initDPlayer();
-//         initDDealer();
-//         initDPlayer();
-//         secondCDealer();
-//         revealDealerPartialHand()
-// }
 

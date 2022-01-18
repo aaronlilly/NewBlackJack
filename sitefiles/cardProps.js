@@ -417,5 +417,3 @@ var cardDeck = [{
     "img": '<img src ="./cards/Kh.png">'
   }
     ];
-
-    

@@ -4,5 +4,7 @@
        initDeal();
        $('#startButton').css({'display':'none'});
        $('#options').css({'display':'block'});
+       playerScoreShow();
+       youShouldntCheat();
       });
   });
