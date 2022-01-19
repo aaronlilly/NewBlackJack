@@ -1,23 +1,25 @@
 $(document).ready(function() {
     $('#hit').click(function() {
         hitMe();
+        dealerEvalu();
    });
    $('#stand').click(function() {
-    standMe();
-});
+      standMe();
+      dealerEvalu();
+   });
 });
 
 
 function hitMe(){
    disabl("hit");
-
-}
+   disabl("stand");
+};
 
 function standMe(){
     disabl("stand");
-    disabl("hit")
+    disabl("hit");
     
-}
+};
 
 
 function disabl(eth){
@@ -26,8 +28,8 @@ function disabl(eth){
  }
  else if(eth == "hit"){
     $('#hit').prop('disabled', true);
- }
-}
+ };
+};
 
 function enabl(eth){
     if (eth == "stand") {
@@ -35,5 +37,5 @@ function enabl(eth){
      }
      else if(eth == "hit"){
         $('#hit').prop('disabled', false);
-     }
-}
+     };
+};
