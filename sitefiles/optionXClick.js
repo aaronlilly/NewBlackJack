@@ -19,6 +19,7 @@ function hitMe(){
             "yes")
          {
           giveAcard2("player");
+          checkBust("player");
          }
       };
 
@@ -54,7 +55,15 @@ function giveAcard2(who){
    if (who == "player"){
       var roll = Math.floor(Math.random() * cardDeck.length);
       playerhand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
-      cardDeck.splice(roll,1,);
+     
+      //update values
+      playerStatus.tnum +=  cardDeck[roll].eval;
+      playerStatus.bnum += cardDeck[roll].altEval;
+      //update visual values
+      playerScoreShowOnly();
+     //remove card from deck
+      cardDeck.splice(roll,1,);     
+      //update cards visable on site
       viewPlayerHand();
    }else if(who == "dealer"){
       var roll = Math.floor(Math.random() * cardDeck.length);

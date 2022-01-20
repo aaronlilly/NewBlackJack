@@ -47,3 +47,7 @@ function youShouldntCheat(){
 };
 
 
+function playerScoreShowOnly(){
+    document.getElementById("pTop").innerHTML = playerStatus.tnum;
+    document.getElementById("pBottom").innerHTML = playerStatus.bnum;
+};
