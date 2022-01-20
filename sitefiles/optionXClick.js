@@ -77,11 +77,11 @@ function giveAcard2(who){
 function checkBust(who)
 {
    if (who == "player"){
-      if(playerStatus.bnum  > 21){
+      if(playerStatus.tnum  > 21){
          disablePlayer();
          playerStatus.points -= 1;
          playerStatus.bust = "yes";
-         
+         alert("Player Busts")
       }
 
    }
