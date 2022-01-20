@@ -34,14 +34,27 @@ function dealerEvalu(){
  if(dealerStatus.bnum == 21){
    dealerStand();
  }else{
-    moreEval();
+   checkAltEval();
  }
 };
 
-function moreEval(){
-   if(dealerStatus.bnum >=9){
+function checkAltEval(){
+   if(dealerStatus.bnum < 21){
+  checkAltEval2();
+} else if (dealerStatus.bnum > 21){
+   checkEval();
+}
+}
+
+
+
+function checkEval(){
+    //if dealer lower score greater than 9, stand.
+   if(dealerStatus.tnum >=9){
       dealerStand();
    };
+   ////if dealer lower score less than 9, do another evaluation
+    
 }
 
 function bothStand(){
