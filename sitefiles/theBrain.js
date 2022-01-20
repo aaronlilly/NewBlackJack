@@ -31,12 +31,21 @@ function dealerStand(){
 //929
 //if dealer lower score greater than 9, stand
 function dealerEvalu(){
-  if(dealerStatus.bnum >=9){
-     dealerStand();
-  };
+ if(dealerStatus.bnum == 21){
+   dealerStand();
+ }else{
+    moreEval();
+ }
 };
 
+function moreEval(){
+   if(dealerStatus.bnum >=9){
+      dealerStand();
+   };
+}
+
 function bothStand(){
+   //probably redundant
    disablePlayer();
    //revealDealerCards
    //whosCLose
@@ -49,39 +58,13 @@ function checkPlayerStandToo(){
    {
       bothStand();
    }
-   //if above is false , and stand is eq no then check turn
-   else{
-      playerCheckTurn();
-   };
+   else if(playerStatus.bust != "no")
+   {
+      //there really is no difference in what happens in both stand if both stand or player busts
+      bothStand();
+   }
 };
 
-
-function playerCheckTurn(){
-   if (playerStatus.stand == "no"){
-      if(playerStatus.bust == "no"){
-         enabl("hit");
-         enabl("stand");
-      }
-   }
-}
-// function dealerEvalu(){
-// if(dealerStatus.bnum > 21){
-//    dealerBust();
-// }
-
-
-      // console.log(dealerStatus.tnum)
-      // console.log(dealerStatus.bnum)  
-      // if (dealerStatus.bust = "no"){
-      //    if(dealerStatus.stand = "no"{
-      //       if(dealerStatus.bnum >= 14)
-      //       dealerHit();
-      //       else if (dealerStatus.bnum < 15){
-      //          if(dealerStatus.bnum )
-      //       }
-      //    })
-      // }
-   
 
 
  

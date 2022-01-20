@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $('#hit').click(function() {
         hitMe();
-        //dealerEvalu();
+        dealerEvalu();
    });
    $('#stand').click(function() {
       standMe();
-      //dealerEvalu();
+      dealerEvalu();
    });
 });
 
