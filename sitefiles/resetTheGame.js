@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#reset').click(function() {
-        resetDemo();
+        resetTheGamez();
    });
 });
 
@@ -18,16 +18,19 @@ function returnAllCards(){
    }
 };
 
-function resetDemo(){
+function resetTheGamez(){
     returnAllCards();
     playerStatus.reset();
     dealerStatus.reset();
 
     playerHandEvaluate();
     playerScoreShow();
-    youShouldntCheat();
+   
 
     clearPH();
     clearDH();
+    initDeal();
+    youShouldntCheat();
+    playerScoreShow();
 };
 

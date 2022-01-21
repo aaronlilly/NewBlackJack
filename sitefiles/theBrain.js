@@ -28,7 +28,14 @@ function dealerStand(){
    };
 };
 
-//929
+
+function revealDealerCards(){
+   clearDH();
+   for (var i = 0; i < dealerhand.length; i++) {
+           document.getElementById("dealerHandViewer").innerHTML += dealerhand[i].img;
+   };
+}
+
 //if dealer lower score greater than 9, stand
 function dealerEvalu(){
  if(dealerStatus.bnum == 21){
@@ -83,10 +90,10 @@ function checkEval2(){
  function takeAchance (){
    roll = Math.floor(Math.random() * 50) + 1;
    if (roll <= 26) {dealerHit();
-    ;
+    
    } else {
-     dealerStand();}
- }
+     dealerStand();};
+ };
 
  function dealerHit(){
     alert("dealer hits");
@@ -102,14 +109,14 @@ function checkEval2(){
    //this is just visual
    revealDealerPartialHand();
 
- }
+ };
 
 function bothStand(){
    //probably redundant
    disablePlayer();
-   //revealDealerCards
+   revealDealerCards();
    //whosCLose
-}
+};
 
 
 function checkPlayerStandToo(){
