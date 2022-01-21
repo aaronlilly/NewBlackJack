@@ -1,11 +1,13 @@
 $(document).ready(function() {
     $('#hit').click(function() {
         hitMe();
-        dealerEvalu();
+       if (playerStatus.bust == "no"){
+           dealerEvalu();}
    });
    $('#stand').click(function() {
       standMe();
-      dealerEvalu();
+      if (playerStatus.bust == "no"){dealerEvalu();
+      }
    });
 });
 
@@ -80,9 +82,18 @@ function checkBust(who)
       if(playerStatus.tnum  > 21){
          disablePlayer();
          playerStatus.points -= 1;
+         dealerStatus.points += 1;
          playerStatus.bust = "yes";
          alert("Player Busts")
       }
 
+   }else if (who == "dealer"){
+      if(dealerStatus.tnum > 21){
+         disablePlayer();
+         playerStatus.points += 1;
+         dealerStatus.points -= 1;
+         dealerStatus.bust = "yes";
+         playerWins();
+      }
    }
-}
+};
