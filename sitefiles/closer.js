@@ -96,7 +96,7 @@ function useDealerAltEval(){
         }
     }
     
-    //set a value if player bust to 21
+    //set a value if player bust to 21 
     function useBustPlayer(){
       $("#playz").val(21)
     }
@@ -112,7 +112,7 @@ function useDealerAltEval(){
     function usePlayerEval(){
       var playerLow = parseInt($('#playScoreEval').val());
         $("#playz").val(21 - playerLow);
-    }
+    }---
 
 // function whoCLose(){
 //     //make sure that both have not busted
