@@ -1,11 +1,15 @@
 function disablePlayer(){
    disabl("hit");
    disabl("stand");
-}
+};
 
 function playerWins(){
    alert("Player Wins");
-}
+};
+
+function dealerWins(){
+   alert("Dealer Wins");
+};
 
 function dealerBust(){
    if(dealerStatus.bust != "no"){}
@@ -31,10 +35,11 @@ function dealerStand(){
 
 function revealDealerCards(){
    clearDH();
-   for (var i = 0; i < dealerhand.length; i++) {
-           document.getElementById("dealerHandViewer").innerHTML += dealerhand[i].img;
+   for (var i = 0; i < dealerhand.length; i++) 
+   {
+      document.getElementById("dealerHandViewer").innerHTML += dealerhand[i].img;
    };
-}
+};
 
 //if dealer lower score greater than 9, stand
 function dealerEvalu(){
@@ -42,16 +47,16 @@ function dealerEvalu(){
    dealerStand();
  }else{
    checkAltEval();
- }
+ };
 };
 
 function checkAltEval(){
    if(dealerStatus.bnum < 21){
-  checkAltEval2();
-} else if (dealerStatus.bnum > 21){
-   checkEval();
-}
-}
+      checkAltEval2();
+   }else if (dealerStatus.bnum > 21){
+      checkEval();
+ };
+};
 
 function checkAltEval2(){
    //if larger score less than or equal to 14, take a chance
@@ -63,7 +68,7 @@ function checkAltEval2(){
             {
               dealerStand(); 
             };
- }
+ };
 
 function checkEval(){
     //if dealer lower score greater than 9, stand.
@@ -73,8 +78,8 @@ function checkEval(){
    ////if dealer lower score less than 9, do another evaluation
     {
        checkEval2();
-    }
-}
+    };
+};
 
 
 function checkEval2(){
@@ -85,7 +90,7 @@ function checkEval2(){
    else if (dealerStatus.tnum > 14){
      dealerStand(); 
    };
- }
+ };
 
  function takeAchance (){
    roll = Math.floor(Math.random() * 50) + 1;
@@ -115,7 +120,7 @@ function bothStand(){
    //probably redundant
    disablePlayer();
    revealDealerCards();
-   //whosCLose
+   whoCLose();
 };
 
 
@@ -129,7 +134,7 @@ function checkPlayerStandToo(){
    {
       //there really is no difference in what happens in both stand if both stand or player busts
       bothStand();
-   }
+   };
 };
 
 

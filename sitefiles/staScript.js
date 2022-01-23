@@ -4,13 +4,14 @@ bnum: 0,
 stand: "no",
 bust: "no",
 points: 0,
-disabl: "no",
+playz:0,
 reset: function () {
     this.tnum = 0;
     this.bnum = 0;
     this.stand = "no";
     this.bust =  "no";
     this.disabl = "no";
+    this.playz = 0;
   }
 };
 
@@ -20,13 +21,13 @@ var dealerStatus = {
     stand: "no",
     bust: "no",
     points: 0,
-    disabl: "no",
+    dealz:0,
     reset: function () {
         this.tnum = 0;
         this.bnum = 0;
         this.stand = "no";
         this.bust =  "no";
-        this.disabl = "no";
+        this.dealz = 0;
       }
     };
 
