@@ -4,13 +4,15 @@ $(document).ready(function() {
        if (playerStatus.bust == "no"){
            dealerEvalu();}
    });
-   $('#stand').click(function() {
-      standMe();
-      if (playerStatus.bust == "no"){dealerEvalu();
-      }
-   });
 });
 
+$(document).ready(function() {
+$('#stand').click(function() {
+   standMe();
+   if (playerStatus.bust == "no"){dealerEvalu();
+   }
+});
+});
 
 function hitMe(){
    if (playerStatus.stand != 

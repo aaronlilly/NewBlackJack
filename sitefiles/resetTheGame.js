@@ -18,6 +18,12 @@ function returnAllCards(){
    }
 };
 
+
+function reEnableOptions(){
+        enabl("stand");
+        enabl("hit");     
+};
+
 function resetTheGamez(){
     returnAllCards();
     playerStatus.reset();
@@ -32,5 +38,7 @@ function resetTheGamez(){
     initDeal();
     youShouldntCheat();
     playerScoreShow();
+
+    reEnableOptions();
 };
 
