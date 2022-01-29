@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#reset').click(function() {
         resetTheGamez();
+        disabl("redeal");
    });
 });
 

@@ -75,13 +75,14 @@ var dealerScore = dealerStatus.dealz -21;
     {
     //tie
     alert("tie");
+    enabl("redeal");
     }else if (playerScore > dealerScore)
     {
-    alert("win");
+    win();
     }
     else if(playerScore < dealerScore)
     {
-    alert("lose");
+    lose();
     }
 };
 

@@ -33,6 +33,10 @@ function standMe(){
     disabl("stand");
     disabl("hit");
     playerStatus.stand = "yes";
+    //check if dealer stand too
+    if (dealerStatus.stand == "yes"){
+       whoClose();
+    }
     
 };
 
@@ -43,7 +47,11 @@ function disabl(eth){
  }
  else if(eth == "hit"){
     $('#hit').prop('disabled', true);
- };
+ }
+ else if (eth == "redeal"){
+   $('#reset').prop('disabled', true)
+
+  }
 };
 
 function enabl(eth){
@@ -52,7 +60,10 @@ function enabl(eth){
      }
      else if(eth == "hit"){
         $('#hit').prop('disabled', false);
-     };
+     }
+     else if (eth == "redeal"){
+        $('#reset').prop('disabled', false)
+     }
 };
 
 function giveAcard2(who){

@@ -1,9 +1,10 @@
 function win(){
     alert("win");
-    console.log("win");
+    enabl("redeal");
 };
 
 function lose(){
+    enabl("redeal");
     alert("lose");
-    console.log("lose");
+    enabl("redeal");
 };

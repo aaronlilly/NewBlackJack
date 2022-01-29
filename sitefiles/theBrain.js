@@ -101,6 +101,10 @@ function checkEval2(){
  };
 
  function dealerHit(){
+   if(dealerStatus.stand == "yes"){
+      dealerEvalu();
+   }else if(dealerStatus.bust == "no"){
+
     alert("dealer hits");
    var roll = Math.floor(Math.random() * cardDeck.length);
    dealerhand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
@@ -117,6 +121,7 @@ function checkEval2(){
 if(playerStatus.stand == "yes"){
    dealerEvalu();
 };
+   }
  };
 
 function bothStand(){
