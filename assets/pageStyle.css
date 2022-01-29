@@ -12,3 +12,8 @@ img {
 	height:154px;}
 
   #options{display: none;}
+
+  #options{
+      margin-top:2%;
+      margin-bottom:2%;
+  }
