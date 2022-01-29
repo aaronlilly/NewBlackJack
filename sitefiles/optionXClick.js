@@ -94,20 +94,17 @@ function checkBust(who)
    if (who == "player"){
       if(playerStatus.tnum  > 21){
          disablePlayer();
-         playerStatus.points -= 1;
-         dealerStatus.points += 1;
+        lose();
          playerStatus.bust = "yes";
          alert("Player Busts");
-         //lose function needed
+        
       }
 
    }else if (who == "dealer"){
       if(dealerStatus.tnum > 21){
          disablePlayer();
-         playerStatus.points += 1;
-         dealerStatus.points -= 1;
          dealerStatus.bust = "yes";
-         playerWins();
+         win(;)
       }
    }
 };
