@@ -84,7 +84,8 @@ function checkBust(who)
          playerStatus.points -= 1;
          dealerStatus.points += 1;
          playerStatus.bust = "yes";
-         alert("Player Busts")
+         alert("Player Busts");
+         //lose function needed
       }
 
    }else if (who == "dealer"){

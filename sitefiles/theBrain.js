@@ -113,14 +113,17 @@ function checkEval2(){
 
    //this is just visual
    revealDealerPartialHand();
-
+//check if player has stood, if player has then evaluate again what the dealer does
+if(playerStatus.stand == "yes"){
+   dealerEvalu();
+};
  };
 
 function bothStand(){
    //probably redundant
    disablePlayer();
    revealDealerCards();
-   whoCLose();
+   whoClose();
 };
 
 
