@@ -1,10 +1,11 @@
 function win(){
     alert("win");
+    playerStatus.points += 1;
     enabl("redeal");
 };
 
 function lose(){
-    enabl("redeal");
     alert("lose");
+    playerStatus.points -= 1;
     enabl("redeal");
 };
