@@ -104,7 +104,7 @@ function checkBust(who)
       if(dealerStatus.tnum > 21){
          disablePlayer();
          dealerStatus.bust = "yes";
-         win(;)
+         win();
       }
    }
 };
