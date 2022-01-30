@@ -1,7 +1,7 @@
 let playerhand = [];
 let dealerhand = [];
 
-var coverCard =[{"img":'<img src ="./cards/covercard.png" id="coverCard" style="width: 96px;height:154px;">'}]; 
+var coverCard =[{"img":'<img src ="./cards/covercard.png" id="coverCard" style="width: 62px;height:130px;">'}]; 
 function shuffleMe(){cardDeck.sort(function (a, b) {return Math.random() - 0.5;})};
 
 function clearPH(){

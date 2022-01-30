@@ -1,19 +1,48 @@
+body{
+    background-color: #7ee8fa;
+background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
+font-family: "Times New Roman", Times, serif;
+
+
+
+}
 #page{
     margin-left:2%;
 }
 
 img {
-	width: 96px;
-	height:154px;
+	width: 64px;
+	height:130px;
+    margin-left:1%;
 
 }
 
-#coverCard{width: 96px;
-	height:154px;}
+#coverCard{width: 64px;
+	height:124px;}
 
   #options{display: none;}
 
   #options{
       margin-top:2%;
       margin-bottom:2%;
+      padding:1%;
+      background:black;
+      width:51%;
+      border-radius: 5%;
   }
+
+#scoreContainer{
+    float:right;
+    margin-right:2%;
+}
+
+#pTop{
+    font-family: "Impact",  sans-serif;
+    font-size: 40px;
+}
+
+#pBottom{
+    font-family:  "Impact",  sans-serif;
+    font-size: 40px;
+}
