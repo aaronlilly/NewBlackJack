@@ -35,6 +35,7 @@ function initDPlayer(){
         playerhand.push({"card":cardDeck[roll].card,"suit":cardDeck[roll].suit,"color":cardDeck[roll].color,"eval":cardDeck[roll].eval,"altEval":cardDeck[roll].altEval,"img":cardDeck[roll].img})
         cardDeck.splice(roll,1,);
         viewPlayerHand();
+        playerPoints();
 };
 
 function initDDealer(){
@@ -59,3 +60,7 @@ function initDeal(){
         revealDealerPartialHand()
 };
 
+function playerPoints(){
+        document.getElementById("points").innerHTML = playerStatus.points;
+        
+};
