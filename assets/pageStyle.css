@@ -28,7 +28,8 @@ height:119px;}
       margin-bottom:2%;
       padding:1%;
       background:black;
-      width:55%;
+      width: -moz-fit-content;
+  width: fit-content;
       border-radius: 5%;
   }
 
